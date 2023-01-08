@@ -31,3 +31,29 @@ print(f"{VAR:.2f}")
 
 - def - define a function
 
+-------------
+Lecture 1
+Conditionals
+-------------
+>
+>=
+<
+<=
+==
+!=
+
+if
+- ability to ask questions in Python
+- Sample: if following block of code is true, run certain code
+
+elif
+- else and if combined
+
+else
+
+or
+- Ask two questions
+
+and
+
+match
