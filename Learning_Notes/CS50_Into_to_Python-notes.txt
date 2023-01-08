@@ -1,0 +1,33 @@
+----------------------------------------
+Introduction to Programming with Python
+----------------------------------------
+
+-------------
+Lecture 0
+Fucnticons, Variables
+-------------
+- Arguments - inputs to a fucntion
+- Sample function:
+print("NAME")
+
+- Bugs - a mistake in a program
+- Variable - a container for some vaule
+
+= (equal sign) - assignement character
+
+- Passing multiple arguments to a funcition it adds space characert by default
+var = NAME
+print("Hello,", var)
+
+- str - string data type
+- format string
+var = NAME
+print(f"Hello, {var}")
+
+- int - integers
+- specify how many character to print when using f-strings
+print(f"{VAR:.2f}")
+- This print two characters after value VAR
+
+- def - define a function
+
