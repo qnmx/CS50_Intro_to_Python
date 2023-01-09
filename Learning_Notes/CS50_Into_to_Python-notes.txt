@@ -57,3 +57,93 @@ or
 and
 
 match
+
+-------------
+Lecture 2
+Loops
+-------------
+while
+
+i = i + 1, same as i += 1
+
+for
+
+list
+a = []
+
+range()
+- return a range of vaules
+
+_
+- use underscore symbol to signify the varaiable that is required to use by other feature
+
+- Sample loops
+- Ask user for n, then loop through that number:
+while True:
+    n = int(input("What's n? "))
+    if n > 0:
+        break
+
+for _ in range(n):
+    print("meow")
+
+- Loops defined as functions:
+def main():
+    number = get_number()
+    meow(number)
+
+def get_number():
+    while True:
+        n = int(input("What's n? "))
+        if n > 0:
+            return n
+
+def meow(n):
+    for _ in range(n):
+        print("meow")
+
+main()
+
+len
+- length function
+- Sample len usage:
+students = ["Hermione", "Harry", "Ron"]
+
+for i in range(len(students)):
+    print(i + 1, students[i])
+
+
+dict
+- dictionary
+- empty disctionary:
+var = {}
+- accessing values in a dictionary:
+students= {
+    "Hermione": "Gryffindor",
+    "Harry": "Gryffindor",
+    "Ron": "Gryffindor",
+    "Draco": "Slytherin"
+}
+
+print(students["Hermione"])
+print(students["Harry"])
+print(students["Ron"])
+print(students["Draco"])
+
+- Access key and values in a dictionary:
+students = {
+    "Hermione": "Gryffindor",
+    "Harry": "Gryffindor",
+    "Ron": "Gryffindor",
+    "Draco": "Slytherin"
+}
+
+for student in students:
+    print(student, students[student], sep =", ")
+
+None
+- absense of a value
+
+
+
+
