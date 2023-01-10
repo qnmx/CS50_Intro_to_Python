@@ -222,3 +222,112 @@ main()
 
 raise
 - Raise exceptions in Python by yourself
+
+-------------
+Debugging
+-------------
+
+brakpoints
+- ability to specify in vs code, as well as other editors to pause executing code further
+
+
+-------------
+Lecture 4
+Libraries
+-------------
+modules
+- library in Python that has one or more features built into it
+- encourage reusability of code
+
+random
+- built-in library
+
+import
+- allow to import modules to Python code
+
+from
+- keyword to specify which function to import from a module
+
+random.choice(seq)
+random.randint(a, b)
+random.shuffle(x)
+
+statistics
+- Python library
+
+command-line arguments
+
+sys
+- System module
+
+sys.argv
+- argument vector
+- variable as a list
+- Sample:
+import sys
+
+print("Hello, my name is", sys.argv[1])
+
+CLI: py name.py NAME
+
+sys.exit()
+- function that exits the program
+- Sample:
+import sys
+
+if len(sys.argv) < 2:
+    sys.exit("Too few arguments")
+elif len(sys.argv) > 2:
+    sys.exit("Two many arguments")
+
+print("Hello, my name is", sys.argv[1])
+
+slices
+- Specify which element in a list to use
+- Sample:
+import sys
+
+if len(sys.argv) < 2:
+    sys.exit("Too few arguments")
+
+for arg in sys.argv[1:]:
+    print("Hello, my name is", arg)
+
+packages
+- third-party libraries
+
+PyPI
+- Python Package Index
+- pypi.org
+
+cowsay
+- Python package
+
+pip
+- Python package installer
+
+APIs
+- Application Programming Interface
+
+requests
+- Python package
+- requests library allows us to make web requests using Python code
+
+JSON
+- JavaScript Object Notation
+- language-agnostic format for exchanging data between computers
+
+requests.get()
+- .get() is a function inside requests package that allows to get a response from a server
+
+.json()
+- Response will be provided in JSON format
+
+json
+- Built-in Python library
+
+json.dumps()
+- JSON dump string
+
+__name__
+- special variable in Python
