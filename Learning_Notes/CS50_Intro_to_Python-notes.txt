@@ -331,3 +331,77 @@ json.dumps()
 
 __name__
 - special variable in Python
+
+-------------
+Lecture 5
+Unit Test
+-------------
+
+assert
+- to assert is something is true
+- Sample:
+from calculator import sqaure
+
+def main():
+    test_square()
+
+def test_square():
+    try:
+        assert sqaure(2) == 4
+    except AssertionError:
+        print("2 squared was not 2")
+    try:
+        assert sqaure(3) == 9
+    except AssertionError:
+        print("3 squared was not 9")
+
+if __name__ == "__main__":
+    main()
+
+- calulator.py:
+def main():
+    x = int(input("What's x? "))
+    print("x sqaured is", sqaure(x))
+
+def sqaure(n):
+    return n + n
+
+if __name__ == "__main__":
+    main()
+
+pytest
+- third-party program that helps with testing Python code
+- install with pip
+- Sample:
+
+from calculator import sqaure
+
+def test_square():
+    assert sqaure(2) == 4
+    assert sqaure(3) == 9
+    assert sqaure(-2) == 4
+    assert sqaure(-3) == 9
+    assert sqaure(0) == 0
+
+- Test with pytest FileName.py
+- Other sample, multiple tests:
+
+from calculator import sqaure
+
+def test_positive():
+    assert sqaure(2) == 4
+    assert sqaure(3) == 9
+
+
+def test_negative():
+    assert sqaure(-2) == 4
+    assert sqaure(-3) == 9
+
+
+def test_zero():
+    assert sqaure(0) == 0
+
+packages
+- Python module(s), that are organised inside of a folder
+- __init__.py - treat the folder as a package
+
