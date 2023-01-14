@@ -507,3 +507,96 @@ for student in sorted(students, key=lambda student: student["name"]):
 
 csv Library
 
+
+-------------
+Lecture 7
+Regular Expressions
+-------------
+
+Basic pattern matching
+-Sample
+---
+email = input("What's your email? ").strip()
+
+username, domain = email.split("@")
+
+if username and domain.endswith(".edu"):
+    print("Valid")
+else:
+    print("Invalid")
+---
+
+re
+- Regular Expression library
+
+re.search(pattern, string, flags=0)
+- search function available in re library
+
+RE symbols
+. any character except a newline
+* 0 or more repetitions
++ 1 or more repetitions, "one or more of the thigns to the left"
+? 0 or 1 repetiion
+{m} m repetitions
+{m,n} m-n repetitions
+^ matches the start of the string
+$ matches the end of the string or just before the newline at the end of the string
+[] set of characters
+[^] complementing the set, do not match any characters in the set
+[_] search for underscores
+
+Character Classes
+\d decimal digit
+\D not a decimal digit
+\s whitespace characters, not only a single space, but a tab as well
+\S not a whitespace character
+\w word chracter, as well as numbers and the underscore
+\W not a work character
+
+A|B either A or B
+(...) a group
+(?:...) non-capturing version, use parentheses but do not capture the value
+
+Flags
+re.IGNORECASE
+re.MULTILINE, search multiple lines for same pattern
+re.DOTALL, any character plus a new line
+
+Python RAW input
+r""
+
+re.match(pattern, string flags=0)
+^pattern
+
+re.fullmatch(pattern, string flags=0)
+^pattern$
+
+Capturing Groups
+(...)
+- anything that is surounded in parentheses will be returned as a return value
+- VAR.groups(n), ask for return value
+
+:=
+- the walrus operator
+- assign something from right to left and ask an if or else questions at once
+
+.replace(old, new)
+- replace method for strings
+
+removeprefix()
+- remove string that comes at the start of another
+
+re.sub(pattern, repl, string, count=0, flags=0)
+- substitute
+- pattern - Regex
+- repl - a replacement string
+- string - string to search
+
+Remeber to escape special characters.
+Example https:\\twitter\.com
+
+re.spli(pattern, string, maxsplit=0, flags=0)
+- split by using multiple characters
+
+re.findall(pattern, string, flags=0)
+- search for multiple copies of same patternt in differernt places in the string
